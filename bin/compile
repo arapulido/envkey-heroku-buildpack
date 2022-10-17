@@ -43,7 +43,8 @@ if [ -f $ENV_DIR/ENVKEY ]; then
   export "ENVKEY=$(cat $ENV_DIR/ENVKEY)"
 
   if [ -f $ENV_DIR/ENVKEY_BUILD_PHASE_EXPORT ]; then
-    cat $ENV_DIR/PROXY_URL
+    echo "HTTP proxy:"
+    cat $ENV_DIR/HTTP_PROXY
     echo $($ENVKEY_DIR/envkey-source) > $BP_DIR/export
     echo "EnvKey variables exported to subsequent buildpacks" | indent
   fi
