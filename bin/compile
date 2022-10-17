@@ -43,6 +43,7 @@ if [ -f $ENV_DIR/ENVKEY ]; then
   export "ENVKEY=$(cat $ENV_DIR/ENVKEY)"
 
   if [ -f $ENV_DIR/HTTPS_PROXY ]; then    
+    echo "Detected HTTPS_PROXY config var. Exporting as env var." | indent
     export "HTTPS_PROXY=$(cat $ENV_DIR/HTTPS_PROXY)"
   fi
 
